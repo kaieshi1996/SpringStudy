@@ -1,10 +1,13 @@
 import com.kuang.pojo.Hello;
 import com.kuang.pojo.Student;
+import com.kuang.pojo.User;
 import com.kuang.service.UserService;
 import com.kuang.service.impl.UserServiceImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import javax.jws.soap.SOAPBinding;
 
 public class test {
     @Test
@@ -30,6 +33,15 @@ public class test {
 
         student.show();
 
+    }
+
+    @Test
+    public void test4(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+        User user = (User) context.getBean("user");
+
+        System.out.println(user.name);
     }
 
 
