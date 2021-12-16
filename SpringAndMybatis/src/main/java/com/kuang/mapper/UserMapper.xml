@@ -4,8 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kuang.mapper.UserMapper">
 
-    <select id="selectUser" resultType="User">
+    <select id="selectUser2" resultType="com.kuang.pojo.User">
     select * from user
    </select>
+
+
 
 </mapper>
